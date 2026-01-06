@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Tugas - blibli</title>
+<link rel="icon" href="https://static.vecteezy.com/system/resources/previews/067/565/460/non_2x/blibli-rounded-logo-design-free-png.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  
+    
+  margin: 0;
+  min-height: 100vh;
+  background: url("https://imageos.net/image/gallery/uploads/1767679019_c49ee643cc.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #00f7ff;
+  text-shadow: 0 0 15px #00f7ff;
+}
+
+.header span {
+  color: #ff00cc;
+}
+
+/* Grid */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: linear-gradient(145deg, rgba(0,255,255,0.15), rgba(255,0,255,0.1));
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.card h2 {
+  color: #00f7ff;
+}
+
+/* Button */
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00f7ff, #ff00cc);
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+}
+.center-bank {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.3);
+}
+
+.bank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 12px;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.bank img {
+  height: 28px;
+}
+
+.bank:hover {
+  transform: scale(1.05);
+}
+/* ===================== */
+/* RAPIN MODE HP SAJA */
+/* ===================== */
+@media (max-width: 600px) {
+
+  .center-bank {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .bank {
+    padding: 6px;
+    min-height: 46px;           /* BIKIN SEMUA SAMA TINGGI */
+    justify-content: center;
+  }
+
+  .bank img {
+    height: 22px;               /* KECILKAN LOGO */
+  }
+
+  .bank img:first-child {
+    height: 14px;               /* ONLINE GIF LEBIH KECIL */
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>TABLE <span>TUGAS</span></h1>
+  <p>Distribusi Online Terintegritas</p>
+</div>
+
+<div class="container">
+
+  <!-- PAKET 1 -->
+  <div class="card">
+    <h2>Paket 1</h2>
+    <p>Isi Ulang: Rp 550.000</p>
+    <p>Komisi: 20%</p>
+    <p>Penarikan: Rp 660.000</p>
+    <button class="btn" onclick="pilihPaket(1,'550.000')">PILIH PAKET</button>
+  </div>
+
+  <!-- PAKET 2 -->
+  <div class="card">
+    <h2>Paket 2</h2>
+    <p>Isi Ulang: Rp 1.050.000</p>
+    <p>Komisi: 20%</p>
+    <p>Penarikan: Rp 1.260.000</p>
+    <button class="btn" onclick="pilihPaket(2,'1.050.000')">PILIH PAKET</button>
+  </div>
+
+  <!-- PAKET 3 -->
+  <div class="card">
+    <h2>Paket 3</h2>
+    <p>Isi Ulang: Rp 1.800.000</p>
+    <p>Komisi: 20%</p>
+    <p>Penarikan: Rp 2.160.000</p>
+    <button class="btn" onclick="pilihPaket(3,'1.800.000')">PILIH PAKET</button>
+  </div>
+
+  <!-- PAKET 4 -->
+  <div class="card">
+    <h2>Paket 4</h2>
+    <p>Isi Ulang: Rp 2.600.000</p>
+    <p>Komisi: 30%</p>
+    <p>Penarikan: Rp 3.120.000</p>
+    <button class="btn" onclick="pilihPaket(4,'2.600.000')">PILIH PAKET</button>
+  </div>
+
+  <!-- PAKET 5 -->
+  <div class="card">
+    <h2>Paket 5</h2>
+    <p>Isi Ulang: Rp 3.400.000</p>
+    <p>Komisi: 20%</p>
+    <p>Penarikan: Rp 4.080.000</p>
+    <button class="btn" onclick="pilihPaket(5,'3.400.000')">PILIH PAKET</button>
+  </div>
+
+  <!-- PAKET 6 -->
+  <div class="card">
+    <h2>Paket 6</h2>
+    <p>Isi Ulang: Rp 5.500.000</p>
+    <p>Komisi: 30%</p>
+    <p>Penarikan: Rp 7.150.000</p>
+    <button class="btn" onclick="pilihPaket(6,'5.500.000')">PILIH PAKET</button>
+  </div>
+
+  <!-- PAKET 7 -->
+  <div class="card">
+    <h2>Paket 7</h2>
+    <p>Isi Ulang: Rp 7.000.000</p>
+    <p>Komisi: 30%</p>
+    <p>Penarikan: Rp 9.100.000</p>
+    <button class="btn" onclick="pilihPaket(7,'7.000.000')">PILIH PAKET</button>
+  </div>
+
+  <!-- PAKET 8 -->
+  <div class="card">
+    <h2>Paket 8</h2>
+    <p>Isi Ulang: Rp 10.500.000</p>
+    <p>Komisi: 40%</p>
+    <p>Penarikan: Rp 14.700.000</p>
+    <button class="btn" onclick="pilihPaket(8,'10.500.000')">PILIH PAKET</button>
+  </div>
+
+
+</div>
+<div class="center-bank">
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/bca.gif" alt="BCA">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/man.webp" alt="Mandiri">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/bri.webp" alt="BRI">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/bni.gif" alt="BNI">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/danamon.gif" alt="Danamon">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/cimb.gif" alt="CIMB">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/permata.gif" alt="Permata">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/ovo.gif" alt="OVO">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/gopay.gif" alt="Gopay">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/dana.gif" alt="Dana">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/linkaja.gif" alt="LinkAja">
+    </div>
+    <div style="margin-left: 5px;" class="bank">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/Online.gif" alt="Online">
+        <img src="https://gowoman.id/tag/jakarta-barat/img/qris.gif" alt="QRIS">
+    </div>
+</div>
+
+<div class="footer">
+  © 2026 Blibli I Investasi Shop
+</div>
+
+<script>
+function pilihPaket(nomor, harga) {
+  const pesan = `Halo Mentor guru, saya ingin memilih Paket ${nomor} dengan isi ulang Rp ${harga}`;
+  const wa = "https://wa.me/+6285381761217?text=" + encodeURIComponent(pesan);
+  window.open(wa, "_blank");
+}
+</script>
+
+</body>
+</html>
